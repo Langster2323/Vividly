@@ -65,8 +65,12 @@ class Movies extends Component {
         return (
           <main className="container">
             <div className="row">
-              <div className="col-2">
-                <ListGroup items={this.state.genres} onItemSelect={this.handleGenreSelect} />
+              <div className="col-3">
+                <ListGroup 
+                genres={this.state.genres} 
+                onItemSelect={this.handleGenreSelect}
+                textProperty="name"
+                valueProperty="_id" />
               </div>
               <div className="col">
               <h3>There are {this.handleTotalMovie()} movies</h3>

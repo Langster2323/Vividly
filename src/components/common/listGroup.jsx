@@ -1,11 +1,13 @@
 import React from 'react'
 
-const ListGroup = ({ items, onItemSelect }) => {
+const ListGroup = ({ genres, onItemSelect, textProperty, valueProperty }) => {
     return ( 
         <ul className="list-group">
-            {items.map((genre) => {
+            {genres.map((genre) => {
                 return (
-                    <li className="list-group-item" onClick={() => onItemSelect(genre)} key={genre.id}>{genre.name}</li>
+                    <li key={genre[valueProperty]} className="list-group-item" onClick={() => onItemSelect(genre)}>
+                        {genre[textProperty]}
+                    </li>
                 )
                 
             })}
