@@ -48,7 +48,8 @@ class Movies extends Component {
 
       handleGenreSelect = (genre) => {
         this.setState({ 
-          selectedGenre: genre
+          selectedGenre: genre,
+          currentPage: 1
          })
       }
 
@@ -57,7 +58,7 @@ class Movies extends Component {
 
         
 
-        const filtered = selectedGenre ? allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies
+        const filtered = selectedGenre && selectedGenre._id ? allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies
         const movies = paginate(filtered, currentPage, pageSize)
 
         if (filtered.length === 0) return <p>There are no movies in the database.</p>
