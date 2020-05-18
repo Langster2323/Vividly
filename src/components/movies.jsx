@@ -56,12 +56,10 @@ class Movies extends Component {
          })
       }
 
-      handleSort = sortColumn => {
-        
+      handleSort = sortColumn => { 
         this.setState({ 
           sortColumn
          })
-        
       }
 
       render() {
