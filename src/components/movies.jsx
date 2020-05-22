@@ -5,7 +5,7 @@ import { getGenres } from '../services/fakeGenreService';
 import Pagination from './common/pagination';
 import ListGroup from './common/listGroup';
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import { paginate } from '../utils/paginate';
 import _ from 'lodash';
@@ -97,10 +97,7 @@ class Movies extends Component {
                 onItemSelect={this.handleGenreSelect} />
               </div>
               <div className="col">
-                <Link 
-                to="/movies/new" 
-                className="btn btn-primary" 
-                style={{ marginBottom: 20 }}>
+                <Link to="/movies/new" className="btn btn-primary">
                   New Movie
                 </Link>
                 
