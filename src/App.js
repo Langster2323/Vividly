@@ -7,15 +7,16 @@ import Rentals from './components/rentals'
 import NotFound from './components/notFound';
 import MovieForm from './components/movieForm';
 import LoginForm from './components/loginForm';
+import RegisterForm from './components/registerForm';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
-
 
 function App() {
   return (
     <React.Fragment>
       <NavBar />
       <Switch>
+        <Route path="/register" component={RegisterForm} />
         <Route path="/login" component={LoginForm} />
         <Route path="/movies/:id" component={MovieForm} />
         <Route path="/movies" component={Movies} />
