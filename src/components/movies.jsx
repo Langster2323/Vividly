@@ -5,6 +5,8 @@ import { getGenres } from '../services/fakeGenreService';
 import Pagination from './common/pagination';
 import ListGroup from './common/listGroup';
 
+import { Link } from 'react-router-dom';
+
 import { paginate } from '../utils/paginate';
 import _ from 'lodash';
 import MoviesTable from './moviesTable';
@@ -95,6 +97,13 @@ class Movies extends Component {
                 onItemSelect={this.handleGenreSelect} />
               </div>
               <div className="col">
+                <Link 
+                to="/movies/new" 
+                className="btn btn-primary" 
+                style={{ marginBottom: 20 }}>
+                  New Movie
+                </Link>
+                
               <h3>There are {totalCount} movies</h3>
               <MoviesTable 
               movies={movies} 
